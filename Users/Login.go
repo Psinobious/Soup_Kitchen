@@ -27,7 +27,7 @@ func (u *UserLogInHandler) Login(writer http.ResponseWriter, request *http.Reque
 	//requestBody, _ := ioutil.ReadAll(request.Body)
 	//userLogInRequest := UserLogin{}
 	//_ = json.Unmarshal(requestBody, &userLogInRequest)
-	fmt.Printf("testing")
+	fmt.Println("testing")
 }
 func getToken(){
 
