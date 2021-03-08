@@ -3,8 +3,8 @@ package users
 import(
 	"net/http"
 	//"io/ioutil"
-//	"encoding/json"
-	"fmt"
+	"encoding/json"
+	
 )
 
 type UserLogin struct{
@@ -23,11 +23,12 @@ type LoggedInUser struct {
 type OAuthClient struct {
 
 }
-func (u *UserLogInHandler) Login(writer http.ResponseWriter, request *http.Request){
+func (u *UserLogInHandler) Login(w http.ResponseWriter, r *http.Request){
 	//requestBody, _ := ioutil.ReadAll(request.Body)
 	//userLogInRequest := UserLogin{}
 	//_ = json.Unmarshal(requestBody, &userLogInRequest)
-	fmt.Println("testing")
+	json.NewEncoder(w).Encode("testing")
+
 }
 func getToken(){
 
